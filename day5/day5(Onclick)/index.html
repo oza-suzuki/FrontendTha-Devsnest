@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Calculator</h1>
+
+        <div class="input">
+            <input type="text" id="screen1" name="screen1" value="Enter First No." onfocus="this.value=''">
+            <input type="text" id="screen2" name="screen2" value="Enter Second No." onfocus="this.value=''">
+        </div>
+
+        <div class="buttons">
+            <button onclick="addition()">Add +</button>
+            <button onclick="subtraction()">Subtract -</button>
+            <button onclick="multiply()">Multiply *</button>
+            <button onclick="divide()">Divide /</button>
+        </div>
+
+        <button class="result" onclick="submit()">Result</button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

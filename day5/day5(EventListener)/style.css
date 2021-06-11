@@ -1,0 +1,32 @@
+.container {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font-size: 33px;
+    border: 4px solid rgb(81, 178, 207);
+    border-radius: 20px;
+}
+
+button {
+    /* border: 2px solid green; */
+    background-color: aqua;
+    font-size: 40px;
+    width: 100px;
+    height: 57px;
+    border-radius: 20px;
+}
+
+.calculator {
+    /* border: 4px solid red; */
+    background-color: rgb(13, 181, 233);
+    padding: 28px;
+    border-radius: 28px;
+}
+
+body {
+    background-color: rgb(133, 196, 247);
+}

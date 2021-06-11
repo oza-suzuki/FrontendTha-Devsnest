@@ -1,0 +1,47 @@
+/*1*/
+let str = 'This is a string';
+let num = 25;
+let arr = [10, 20, 30, 40];
+console.log(Array.isArray(arr));
+
+
+/*2*/
+let arr = [10, 20, 30, 40];
+const d1 = arr.slice(0);
+console.log(d1);
+
+/*3*/
+var first =  function(arr, n) {
+      if (arr == null) 
+      return 0;
+    if (n == null) 
+      return arr[0];
+    if (n < 0)
+      return [];
+    return arr.slice(0, n);
+};
+console.log(first([7, 9, 0, -2]));
+
+/*4*/
+myColor = ["Red", "Green", "White", "Black"];
+console.log(myColor.join(","));
+console.log(myColor.join("+"));
+
+/*5*/
+var arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var freqarr = {};
+var mfe = arr[0];
+function findMostFrequent(){
+    for(var i = 0; i<arr.length; i++){
+        if(!freqarr[arr[i]]){
+            freqarr[arr[i]]=1;
+        }else{
+            freqarr[arr[i]]++;
+            if(freqarr[arr[i]]>freqarr[mfe]){
+                mfe = arr[i];
+            }
+        }
+    }
+    return mfe;
+}
+console.log(findMostFrequent());

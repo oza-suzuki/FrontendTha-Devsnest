@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(5, 5, 85);
+}
+
+.clock{
+    /* border: 2px solid green; */
+      
+        width: 500px;
+        height: 500px;
+        background-color: whitesmoke;
+        border-radius: 50%;
+        border: 20px solid red;
+        left: 608px;
+        position: relative;
+        top: 122px;
+        padding: 30px;;
+}
+
+.sec, .min, .hour{
+    line-height: 45px;
+    position: relative;
+    transform-origin: bottom;
+}
+
+.sec{
+    /* border: 2px solid green; */
+    height: 231px;
+    width: 5px;
+    left: 245px;
+    background: rgb(255, 0, 0);
+    animation: 60s ease 0s 1 normal none running second_hand;
+    z-index: 3;
+    top: 64px;
+}
+
+.min{
+    /* border: 2px solid green; */
+  
+    height: 250px;
+    width: 10px;
+    top: -143px;
+    left: 243px;
+    background-color: #000;
+    animation: min_anim 600s;
+    z-index: 2;
+}
+
+.hour{
+    /* border: 2px solid green; */
+    height: 180px;
+    width: 14px;
+    background-color: #000;
+    top: -324px;
+    left: 241px;
+    animation: min_hand 60000s;
+    z-index: 1;
+}
+
+@keyframes second_hand{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
+@keyframes min_hand{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
+@keyframes hour_hand{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}

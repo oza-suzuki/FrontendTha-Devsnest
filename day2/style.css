@@ -1,0 +1,12 @@
+body{
+    background-color: aquamarine;
+}
+
+.features, .perks{
+    background-color: bisque;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
