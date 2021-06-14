@@ -1,8 +1,8 @@
 var ans = 0;
 
 function addition() {
-    let a = document.getElementById('screen1').value;
-    let b = document.getElementById("screen2").value;
+    let a = document.getElementById('screen1');
+    let b = document.getElementById("screen2");
     ans = parseInt(a) + parseInt(b);
 }
 
