@@ -7,16 +7,14 @@ var student =
   rollno : 12 
 }
 
-var car =
-{
-  name : "Maruti",
-  model : 'A',
-  price : 500000
-}
+var ans = "";
 
-console.log(student);
-console.log(car);
+  for (const key in student)
+    ans += `${key},`;
 
+  console.log(ans.substring(0, ans.length - 1));
+
+console.log("");
 
 // 2
 
@@ -79,6 +77,7 @@ for(i=0;i<library.length;i++)
     console.log("author name --- "+library[i].author);
     console.log("reading status --- "+library[i].readingStatus);
   
+    console.log("");
 }
 
 // 5
