@@ -1,22 +1,26 @@
+let bookedSeatsElement = document.querySelector(".booking_seats");
+let remainingSeatsElement = document.querySelector(".remaining_seats");
+let seats = document.querySelectorAll(".seats");
 
-let square=document.querySelector(".box")
+let bookedSeats = 0;
+let reaminingSeats = seats.length;
 
-console.log(square)
+bookedSeatsElement.innerText = bookedSeats;
+remainingSeatsElement.innerText = reaminingSeats;
 
-for(let i=1;i<=6;i++){
-	square.innerHTML+="<div class='box'></div>"
-}
+seats.forEach((seat) => {
+  seat.addEventListener('click', () => {
+    console.log("you clicked");
+    seat.classList.toggle('booked');
+    seat.classList.contains('booked') ? bookSeats(1) : bookSeats(-1);
+  });
+});
 
+const bookSeats = (s) => {
+  bookedSeats += 1 * s;
+  reaminingSeats -= 1 * s;
 
+  bookedSeatsElement.innerText = bookedSeats;
+  remainingSeatsElement.innerText = reaminingSeats;
+};
 
-
-
-const box = document.querySelector('.box');
-box.addEventListener('click',() => {
-    if(box.classList.contains('boxclicked')){
-        box.classList.remove('boxclicked');
-    }
-    else{
-        box.classList.add('boxclicked');
-    }
-})
