@@ -43,11 +43,11 @@ h1{
 
 .memory-card.flip{
     transform: rotateY(180deg);
-    transition: transform .5s; 
+    transition: transform .5s;  /* flipping time in seconds    */
 }
 
 .memory-card:active{
-    transform: scale(.97);
+    transform: scale(.98); 
 }
 
 .front-face,.back-face{

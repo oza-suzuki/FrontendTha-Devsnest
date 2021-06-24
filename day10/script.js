@@ -60,7 +60,7 @@ function unflipCards() {
     let randomPos = Math.floor(Math.random()*12);
     card.style.order = randomPos;
   })
-})();//immediately evoked function. 
+})();//immediately evoked function created. 
 
 
 // console.log('I am clicked');
