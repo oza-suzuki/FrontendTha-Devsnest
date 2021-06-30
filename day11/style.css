@@ -1,91 +1,76 @@
-body{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+h1{
+  text-align: center;
+  color: #4cf119;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    /* background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
     margin: 0;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    background-color: rgba(250, 239, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+.quiz-header {
+    padding: 50px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
     padding: 0;
-    background-color: rgb(221, 215, 183);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.header{
-    background-color: antiquewhite;
-    border-radius: 20px;
-    /* border: 2px solid pink; */
-    width: 450px;
-    position: relative;
+ul li {
+    font-size: 20px;
+    margin: 1rem 0;
 }
 
-.ques{
-    /* background-color: rgb(255, 204, 128); */
-    width: auto;
-    height: auto;
-    font-family:Georgia;
-    font-size: x-large;
+ul li label {
+    cursor: pointer;
 }
 
-.container{
-    /* border: 2px solid green; */
-    background-color: rgb(245, 216, 181);
-    width: 40%;
-    height: 200px;
-    margin-top: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-}
-
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.options{
-    /* border: 2px solid green; */
-    display: flex;
-    width: 350px;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-wrap: wrap;
-}
-
-.options .btn{
-    padding: 10px;
-}
-
-button{
-    /* border: 2px solid rgb(128, 85, 92); */
-    height: 50px;
-    width: 150px;
-    font-size: larger;
-    border-radius: 100px;
-    text-align: center;
+button {
+    background-color: #32b63d;
     border: none;
-    background-color: cornsilk;
-    margin-left: 2px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 23px;
+    width: 35%;
+    padding: 21px;
+    border-radius: 40px 40px 40px 40px;
 }
 
-.header{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font: message-box;
+button:hover {
+    background-color: #25a330;
 }
 
-.correct{
-    background-color: rgba(166, 223, 80, 0.884);
+button:focus {
+    background-color: #59b350;
+    outline: none;
 }
 
-.wrong{
-    background-color: rgba(253, 49, 49, 0.658);
-}
-
-.option {
-    min-width: 50%;
+.btn {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 10px;
 }

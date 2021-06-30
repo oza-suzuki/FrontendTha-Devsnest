@@ -1,101 +1,99 @@
-const questions = [
-    {
-        'question' : 'Select the option that suits the Manifesto for Agile Software Development ?',
-        'options' : ['Individuals and interactions' , 'Working software' , 'Customer collaboration' , 'All of the mentioned'],
-        'answer' : 'All of the mentioned'
-    },
+const quizData = [
+  {
+      question: "What is the most used programming language in 2019?",
+      a: "Java",
+      b: "C",
+      c: "Python",
+      d: "JavaScript",
+      correct: "d",
+  },
+  {
+      question: "What does HTML stand for?",
+      a: "Hypertext Markup Language",
+      b: "Cascading Style Sheet",
+      c: "Jason Object Notation",
+      d: "Helicopters Terminals Motorboats Lamborginis",
+      correct: "a",
+  },
+  {
+      question: "What year was JavaScript launched?",
+      a: "1996",
+      b: "1995",
+      c: "1994",
+      d: "none of the above",
+      correct: "b",
+  },
+];
 
-    {
-        'question' : 'Agile Software Development is based on?',
-        'options' : ['Incremental Development' , 'Iterative Development' , 'Linear Development' , 'Both Development'],
-        'answer' : 'Both Development'
-    },
+const quiz = document.getElementById("quiz");
+const answers = document.querySelectorAll(".answer");
+const question = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
 
-    {
-        'question' : 'Agility is not defined as the ability of a project team to respond rapidly to a change?',
-        'options' : ['True' , 'False'],
-        'answer' : 'True'
-    },
-]
+let currentQuiz = 0;
+let score = 0;
 
-// questions.forEach((current) => {
-//     console.log(current);
-// })
+loadQuiz();
 
-// var score = 0;
+function loadQuiz() {
+  deselectAnswers();
 
-function createOption(option, answer = false){
-    const optionHolder = document.createElement('div');
-    optionHolder.className = "option"
+  const currentQuizData = quizData[currentQuiz];
 
-    const button = document.createElement('button');
-    button.innerHTML = option;
-    button.className = "button"
-    button.addEventListener('click',() => {
-        console.log(button);
-        // if(answer){
-        //     console.log(button);
-        //     if(!button.classList.contains('correct')){
-        //         score++;
-        //     }
-        //     button.classList.add("correct");
-        // }
-        // else{
-        //     button.classList.add("wrong");
-        // }
-
-    })
-
-    optionHolder.append(button);
-    return optionHolder;
+  question.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
 }
 
-questions.forEach((current, number) => {
-    console.log(current, number);
+function getSelected() {
+  let answer = undefined;
 
-    const container = document.createElement('div');
-    container.className = "container"
+  answers.forEach((ans) => {
+      if (ans.checked) {
+          answer = ans.id;
+      }
+  });
 
-    const ques = document.createElement('div');
-    ques.className = "ques"
+  return answer;
+}
 
-    ques.innerHTML = `${number+1}. ${current.question}`
-    // console.log(ques);
-    container.append(ques)
+function deselectAnswers() {
+  answers.forEach((ans) => {
+      if(ans.checked)
+        ans.checked = false;
+  });
+}
 
-    const options = document.createElement('div');
-    options.className = "options"
+submitBtn.addEventListener("click", () => {
+  // check to see the answer
+  const answer = getSelected();
 
-    const optionArr = [];
+  if (answer) {
+      if (answer === quizData[currentQuiz].correct) {
+          score++;
+      }
 
-    current.options.forEach((option, number)=>{
-        if(number == 0){
-            optionArr.push(createOption(option, true))
-        }
-        else{
-            optionArr.push(createOption(option))
-        }
-    })
-    optionArr.forEach((option)=>{
-        options.append(option)
-    })
-    // console.log(options);
-    // console.log(container);
-    container.append(options)
-    // console.log(container);
-    document.body.append(container);
-})
+      currentQuiz++;
+      if (currentQuiz < quizData.length) {
+          loadQuiz();
+      } else {
+          quiz.innerHTML = `
+              <h2>You answered correctly at ${score}/${quizData.length} questions.</h2>
+              
+              <button onclick="location.reload()">Reload</button> 
+          `;
+          /*  Reload the current document: */
 
-    /*
-    <div class="container">
-        <div class="ques">
-            1. How owns Internet?
-        </div>
-        <div class="options">
-            <div class="btn"><button class="correct">Ram</button></div>
-            <div class="btn"><button class="wrong">Shyam</button></div>
-            <div class="btn"><button>Suresh</button></div>
-            <div class="btn"><button>Mahesh</button></div>
-        </div>
-    </div>
-    */
+            // Reload the current resources from the browser's cache
+            // window.location.reload();
+            // For reference reload function:- https://www.youtube.com/watch?v=SQFwFjMUgUc
+      }
+
+  }
+}); 

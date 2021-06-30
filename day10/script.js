@@ -8,7 +8,8 @@ let value = false;
 function flipCard() {
 
   if(lockBoard) return;
-  if(this === firstCard) return;
+  if(this === firstCard) 
+    return;
 
   this.classList.toggle('flip');
 
