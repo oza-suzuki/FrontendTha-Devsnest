@@ -1,0 +1,35 @@
+.Chess_container{
+    /* border: 2px solid pink; */
+    height: 440px;
+    width: 440px;
+    padding: 20px;
+}
+
+.Chess_border{
+    /* background-color: rgb(26, 15, 1); */
+    border: 20px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.board{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+
+.box:nth-child(odd){
+    background: rgb(20, 0, 0);
+}
+
+.box:nth-child(even){
+    background: rgb(252, 252, 252);
+}
+
+/* .box{
+    background-color: rgb(15, 0, 0);
+} */
