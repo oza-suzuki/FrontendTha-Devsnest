@@ -33,7 +33,7 @@ body{
     width: 5px;
     left: 245px;
     background: rgb(255, 0, 0);
-    animation: 60s ease 0s 1 normal none running second_hand;
+    animation: second_hand 60s linear infinite;
     z-index: 3;
     top: 64px;
 }
@@ -46,7 +46,7 @@ body{
     top: -143px;
     left: 243px;
     background-color: #000;
-    animation: min_anim 600s;
+    animation: min_hand 600s linear infinite;
     z-index: 2;
 }
 
@@ -57,7 +57,7 @@ body{
     background-color: #000;
     top: -324px;
     left: 241px;
-    animation: min_hand 60000s;
+    animation: hour_hand 6000s linear infinite;
     z-index: 1;
 }
 
