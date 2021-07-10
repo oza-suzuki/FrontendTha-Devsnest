@@ -12,26 +12,24 @@ https://drive.google.com/file/d/1ObaDVHlClEogT9C2qWnwWZY9TgZfuniL/view?usp=shari
 
 To see this project visit
 
-https://king-rohit777.github.io/BREAK-CRAFT/
+https://oza-suzuki.github.io/OpenDraw/
 
 
 
 ## Feedback
 
-If you have any feedback, please reach out to me at jrohit123456@gmail.com
+If you have any feedback, please reach out to me at kamblekravi@gmail.com
 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/king-rohit777/BREAK-CRAFT/blob/main/first.PNG)
+![App Screenshot](https://github.com/oza-suzuki/FrontendTha-Devsnest/blob/main/Hackathon2/images/1.JPG)
 
-![App Screenshot](https://github.com/king-rohit777/BREAK-CRAFT/blob/main/LV1.PNG)
+![App Screenshot](https://github.com/oza-suzuki/FrontendTha-Devsnest/blob/main/Hackathon2/images/2.JPG)
 
-![App Screenshot](https://github.com/king-rohit777/BREAK-CRAFT/blob/main/LV2.PNG)
+![App Screenshot](https://github.com/oza-suzuki/FrontendTha-Devsnest/blob/main/Hackathon2/images/3.JPG)
 
-![App Screenshot](https://github.com/king-rohit777/BREAK-CRAFT/blob/main/lv3.PNG)
 
-![App Screenshot](https://github.com/king-rohit777/BREAK-CRAFT/blob/main/lost.PNG)
 ## Tech Stack
 
 Client: HTML,CSS

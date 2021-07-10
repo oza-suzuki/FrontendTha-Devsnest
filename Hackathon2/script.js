@@ -358,7 +358,7 @@ tools.circle = function () {
             h = Math.abs(ev._y - tool.y0),
             r = Math.max(w, h);
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         if (!r) {
             return;
