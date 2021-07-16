@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./RenderItem.css";
 
+
 const RenderItem = ({item, index, updateItem, removeItem}) => {
   // console.log(item);
   // console.log(index);

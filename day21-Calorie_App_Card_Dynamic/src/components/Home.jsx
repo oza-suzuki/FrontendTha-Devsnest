@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddItem from "./AddItem/AddItem";
 import RenderItem from "./RenderItem/RenderItem";
+import Typewriter from "typewriter-effect";
 
 function Home() {
   const [items, setItems] = useState([]);
@@ -15,20 +16,36 @@ function Home() {
     );
   };
 
-  const removeItem = index => {
-		setItems(items.filter((item, i) => i !== index));
-	};
+  const removeItem = (index) => {
+    setItems(items.filter((item, i) => i !== index));
+  };
 
   return (
     <div>
       <AddItem addItem={addItem} />
       {items.length === 0 ? (
-        <h3 style={{fontFamily: "monospace", fontSize: "30px", position:"relative", left:"80px"}}>Start Adding Items</h3>
+        <h3
+          style={{
+            fontFamily: "monospace",
+            fontSize: "30px",
+            position: "relative",
+            left: "80px",
+          }}
+        >
+          <Typewriter
+            options={{
+              strings: ["Start Adding Items..."],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h3>
       ) : (
         items.map((item, index) => {
           return (
             <RenderItem
               item={item}
+              key={index}
               index={index}
               updateItem={updateItem}
               removeItem={removeItem}
