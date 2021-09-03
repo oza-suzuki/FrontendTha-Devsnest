@@ -1,13 +1,16 @@
-import { createContext } from "react";
+// import { createContext } from "react";
+import React from "react";
 
 export interface ThemeContextType {
-    theme:boolean
-    setTheme:(theme:boolean) => void
+  theme: boolean;
+  setTheme: (theme: boolean) => void;
 }
-const initialState: ThemeContextType = {
-    theme:false,
-    setTheme:(theme:boolean) => {}
-}
-const ThemeContext = createContext<ThemeContextType>(initialState);
- 
+
+const intialState: ThemeContextType = {
+  theme: false,
+  setTheme: (theme) => {},
+};
+
+const ThemeContext = React.createContext(intialState);
+
 export default ThemeContext;
